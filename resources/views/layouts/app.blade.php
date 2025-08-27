@@ -3,16 +3,23 @@
 
 <head>
     <title>@yield('title', config('app.name', 'My App'))</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 
 <body>
+    @if (session('error'))
+        <script>
+            alert("{{ session('error') }}");
+            // Ya agar toastr use karte ho to:
+            // toastr.error("{{ session('error') }}");
+        </script>
+    @endif
 
-
-    {{-- Include navbar --}}
     <div>
         @include('layouts.navbar')
+    </div>
+    <div class="container mt-4">
+        @yield('change-password')
     </div>
     <div class="container mt-4">
         @yield('all-university')
@@ -47,6 +54,31 @@
     <div class="container mt-4">
         @yield('course-detail-view')
     </div>
+    <div class="container mt-4">
+        @yield('uni-name-update-form')
+    </div>
+    <div class="container mt-4">
+        @yield('update-course-detail-form')
+    </div>
+    <div class="container mt-4">
+        @yield('update-course-books-form')
+    </div>
+    <div class="container mt-4">
+        @yield('admin-dashboard')
+    </div>
+    <div class="container mt-4">
+        @yield('student-universities')
+    </div>
+    <div class="container mt-4">
+        @yield('student-dashboard')
+    </div>
+    <div class="container mt-4">
+        @yield('University_roles')
+    </div>
+    <div class="container mt-4">
+        @yield('roles_form')
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

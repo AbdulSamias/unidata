@@ -1,0 +1,155 @@
+ :root {
+     --primary: #1a237e;
+     --secondary: #283593;
+     --accent: #5c6bc0;
+     --light: #e8eaf6;
+     --dark: #0d153a;
+ }
+
+ body {
+     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+     min-height: 100vh;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .header-container {
+     text-align: center;
+     margin-bottom: 30px;
+     padding: 20px;
+     background: white;
+     border-radius: 15px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+ }
+
+ .card {
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+     margin-bottom: 30px;
+ }
+
+ .card-header {
+     background: linear-gradient(to right, var(--primary), var(--secondary));
+     color: white;
+     padding: 20px;
+     font-weight: 600;
+     font-size: 1.4rem;
+ }
+
+ .form-label {
+     font-weight: 600;
+     color: var(--dark);
+     margin-bottom: 8px;
+ }
+
+ .form-control {
+     padding: 12px 15px;
+     border: 2px solid #e0e0e0;
+     border-radius: 10px;
+     transition: all 0.3s;
+ }
+
+ .form-control:focus {
+     border-color: var(--accent);
+     box-shadow: 0 0 0 0.25rem rgba(92, 107, 192, 0.2);
+ }
+
+ .btn-primary {
+     background: linear-gradient(to right, var(--primary), var(--secondary));
+     border: none;
+     padding: 12px 25px;
+     font-weight: 600;
+     border-radius: 10px;
+     transition: all 0.3s;
+ }
+
+ .btn-primary:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ }
+
+ .btn-secondary {
+     background: #6c757d;
+     border: none;
+     padding: 12px 25px;
+     font-weight: 600;
+     border-radius: 10px;
+     transition: all 0.3s;
+ }
+
+ .btn-secondary:hover {
+     background: #5a6268;
+     transform: translateY(-3px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .university-info {
+     background: var(--light);
+     border-radius: 10px;
+     padding: 15px;
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+     border-left: 4px solid var(--accent);
+ }
+
+ .university-info i {
+     font-size: 2rem;
+     color: var(--primary);
+     margin-right: 15px;
+ }
+
+ .input-icon {
+     position: relative;
+ }
+
+ .input-icon i {
+     position: absolute;
+     left: 15px;
+     top: 50%;
+     transform: translateY(-50%);
+     color: var(--accent);
+ }
+
+ .input-icon input {
+     padding-left: 45px;
+ }
+
+ .form-section {
+     margin-bottom: 25px;
+ }
+
+ .error-message {
+     font-size: 0.9rem;
+     margin-top: 5px;
+ }
+
+ .action-buttons {
+     display: flex;
+     justify-content: space-between;
+     margin-top: 30px;
+ }
+
+ .form-container {
+     max-width: 700px;
+     margin: 0 auto;
+ }
+
+ .form-title {
+     color: var(--primary);
+     font-weight: 700;
+     margin-bottom: 5px;
+ }
+
+ .form-subtitle {
+     color: #666;
+     font-size: 1.1rem;
+     margin-bottom: 30px;
+ }
+
+ .logo {
+     color: var(--primary);
+     font-size: 2.5rem;
+     margin-bottom: 10px;
+ }

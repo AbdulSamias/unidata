@@ -14,7 +14,8 @@ class User extends Authenticatable
         'dob',
         'gender',
         'mobile',
-        'password'
+        'password',
+        'role', 
     ];
     function UniversityDetail()
     {

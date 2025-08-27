@@ -14,12 +14,12 @@ class Course extends Model
         'balance_seats'
     ];
     public function university()
-{
-    return $this->belongsTo(University::class);
-}
- public function books()
-{
-    return $this->hasmany(Book::class,'course_id');
-}
+    {
+        return $this->belongsTo(University::class);
+    }
+    public function books()
+    {
+        return $this->hasmany(Book::class, 'course_id');
+    }
 
 }

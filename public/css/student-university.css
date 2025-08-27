@@ -1,0 +1,47 @@
+ .university-select-container {
+     max-width: 1200px;
+     margin: 40px auto;
+ }
+
+ .university-card {
+     border: none;
+     border-radius: 10px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+     transition: all 0.3s ease;
+     cursor: pointer;
+ }
+
+ .university-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+ }
+
+ .university-card .card-body {
+     text-align: center;
+ }
+
+ .university-icon {
+     font-size: 2.5rem;
+     color: #007bff;
+     margin-bottom: 10px;
+ }
+
+ .university-name {
+     font-weight: 600;
+     font-size: 1.2rem;
+ }
+
+ .university-location {
+     font-size: 0.95rem;
+     color: #6c757d;
+ }
+
+ .section-heading {
+     text-align: center;
+     margin-bottom: 40px;
+ }
+
+ .btn-choose {
+     margin-top: 15px;
+     padding: 8px 18px;
+ }

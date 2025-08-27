@@ -1,6 +1,5 @@
     @extends('layouts.app')
-    @section('title', 'Add Course')
-    @section('course-books-form')
+    @section('update-course-detail-form')
         <!DOCTYPE html>
         <html lang="en">
 
@@ -28,32 +27,34 @@
                 <div class="card">
                     <div class="card-header">
                         <h1 class="text-white">
-                            <i class="fas fa-book me-2"></i>Course Information
+                            <i class="fas fa-book me-2"></i>Update Course Information
                         </h1>
                     </div>
                     <div class="card-body p-4">
                         @if (session('success'))
                             <div class="alert alert-success">{{ session('success') }}</div>
                         @endif
-                        <form action="{{ route('courses.submit') }}" method="POST">@csrf
+                        <form action="{{ route('update.course.name.form.submit', $course->id) }}" method="POST">
+                            @csrf @method('PUT')
                             <!-- University Info -->
                             <div class="university-info">
                                 <i class="fas fa-university"></i>
                                 <div>
                                     <h5 class="mb-1">University Name</h5>
-                                    <p class="mb-0 fs-5">{{ $universities->university_name }}</p>
+                                    <p class="mb-0 fs-5">{{ $university->university_name }}</p>
                                 </div>
 
                             </div>
-                            <input type="hidden" name="university_id" value="{{ $universities->id }}">
+                            <input type="hidden" name="university_id" value="{{ $university->id }}">
 
                             <!-- Course Name -->
                             <div class="form-section">
                                 <label for="course_name" class="form-label">Course Name</label>
                                 <div class="input-icon">
                                     <i class="fas fa-book-open"></i>
-                                    <input type="text" class="form-control" id="course_name" name="course_name"
-                                        placeholder="e.g., BSc Computer Science" required>
+                                    <input type="text" class="form-control" value="{{ $course->course_name }}"
+                                        id="course_name" name="course_name" placeholder="e.g., BSc Computer Science"
+                                        required>
                                 </div>
                                 <div class="error-message text-danger">
                                     @error('course_name')
@@ -64,11 +65,11 @@
 
                             <!-- Course Seats -->
                             <div class="form-section">
-                                <label for="course_seats" class="form-label">Available Seats</label>
+                                <label for="course_seats" class="form-label">Course Seats</label>
                                 <div class="input-icon">
                                     <i class="fas fa-users"></i>
-                                    <input type="number" class="form-control" id="course_seats" name="course_seats"
-                                        placeholder="e.g., 60" required>
+                                    <input type="number" class="form-control" value="{{ $course->course_seats }}"
+                                        id="course_seats" name="course_seats" placeholder="e.g., 60" required>
                                 </div>
                                 <div class="error-message text-danger">
                                     @error('course_seats')

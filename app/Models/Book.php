@@ -14,8 +14,17 @@ class Book extends Model
         'book_sale',
         'available_book'
     ];
-     public function courses()
-{
-    return $this->belongsTo(Course::class,'university_id');
-}
+    public function courses()
+    {
+        return $this->belongsTo(Course::class, 'university_id');
+    }
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
+    public function bookDetail()
+    {
+        return $this->hasOne(BookDetail::class);
+    }
+
 }

@@ -1,0 +1,182 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    --card-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+    --transition-ease: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+    background: #f8fcff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-bar {
+    position: relative;
+    padding-bottom: 3rem;
+    text-align: center;
+    background: var(--primary-gradient);
+    margin-bottom: 3rem;
+    border-radius: 0 0 30px 30px;
+    box-shadow: var(--card-shadow);
+    padding: 2.5rem 1rem;
+    color: white;
+}
+
+.header-bar::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(58, 123, 213, 0.3), transparent);
+    z-index: -1;
+}
+
+.card-course {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-ease);
+    background: white;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.card-course:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--hover-shadow);
+}
+
+.card-header {
+    background: var(--primary-gradient);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.course-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    background: rgba(245, 249, 255, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3a7bd5;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(58, 123, 213, 0.15);
+}
+
+.action-buttons {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.btn-action {
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem;
+    font-weight: 600;
+    transition: var(--transition-ease);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-action i {
+    font-size: 1.2rem;
+}
+
+.btn-details {
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    color: white;
+}
+
+.btn-books {
+    background: linear-gradient(135deg, #00b09b, #96c93d);
+    color: white;
+}
+
+.btn-update {
+    background: linear-gradient(135deg, #ff8c00, #ffaa00);
+    color: white;
+}
+
+.btn-action:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+}
+
+.university-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.university-subtitle {
+    font-weight: 300;
+    opacity: 0.9;
+    font-size: 1.2rem;
+}
+
+.course-title {
+    padding: 20px;
+    font-size: 1.3rem;
+    letter-spacing: -0.2px;
+    margin-bottom: 0;
+    color: white;
+}
+
+.stat-label {
+    font-weight: 600;
+    color: #5a6a85;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .university-name {
+        font-size: 2rem;
+    }
+
+    .card-course {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.floating-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    opacity: 0.2;
+}

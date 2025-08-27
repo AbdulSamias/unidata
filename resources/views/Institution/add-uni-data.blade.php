@@ -37,7 +37,7 @@
                                 <!-- University -->
                                 <div class="mb-3">
                                     <label for="uni_name" class="form-label">University</label>
-                                    <input type="text" name="uni_name" id="uni_name" class="form-control" required>
+                                    <input type="text" value="{{ old('uni_name') }}" name="uni_name" id="uni_name" class="form-control" required>
                                     @error('uni_name')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
@@ -46,7 +46,7 @@
                                 <!-- Course -->
                                 <div class="mb-3">
                                     <label for="course" class="form-label">Course</label>
-                                    <input type="text" name="course" id="course" class="form-control" required>
+                                    <input type="text" value="{{ old('course') }}" name="course" id="course" class="form-control" required>
                                 </div>
                                 @error('course')
                                     <small class="text-danger">{{ $message }}</small>
@@ -55,7 +55,7 @@
                                 <!-- Semester -->
                                 <div class="mb-3">
                                     <label for="semester" class="form-label">Semester</label>
-                                    <input type="number" name="semester" id="semester" class="form-control" required>
+                                    <input type="number" name="semester" id="semester" value="{{ old('semester') }}" class="form-control" required>
                                     @error('semester')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
@@ -64,8 +64,8 @@
                                 <!-- Books -->
                                 <div class="mb-3">
                                     <label for="books" class="form-label">Books</label>
-                                    <input type="text" name="books" id="books" class="form-control"
-                                        placeholder="List of books..."></input>
+                                    <input type="text" name="books" id="books" class="form-control" value="{{ old('books') }}"
+                                        placeholder="List of books...">
                                     @error('books')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror

@@ -1,0 +1,124 @@
+ :root {
+     --primary-color: #1a56db;
+     --secondary-color: #3f83f8;
+     --accent-color: #0e9f6e;
+     --light-bg: #f9fafb;
+     --border-radius: 8px;
+     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+     --transition: all 0.3s ease;
+ }
+
+ body {
+     background-color: #f0f2f5;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .card {
+     border: none;
+     border-radius: var(--border-radius);
+     box-shadow: var(--box-shadow);
+     transition: var(--transition);
+ }
+
+ .card:hover {
+     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+ }
+
+ .card-header {
+     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+     border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+     padding: 1.25rem 1.5rem;
+ }
+
+ .university-item {
+     transition: var(--transition);
+     border-radius: var(--border-radius);
+     margin-bottom: 12px;
+     border: 1px solid #e5e7eb;
+ }
+
+ .university-item:hover {
+     background-color: #f8fafc;
+     transform: translateY(-2px);
+     border-color: #d1d5db;
+ }
+
+ .btn-action {
+     padding: 0.4rem 0.8rem;
+     font-size: 0.85rem;
+     border-radius: 6px;
+     display: flex;
+     align-items: center;
+     gap: 6px;
+ }
+
+ .btn-primary {
+     background-color: var(--primary-color);
+     border-color: var(--primary-color);
+ }
+
+ .btn-success {
+     background-color: var(--accent-color);
+     border-color: var(--accent-color);
+ }
+
+ .btn-outline-primary {
+     color: var(--primary-color);
+     border-color: var(--primary-color);
+ }
+
+ .btn-outline-primary:hover {
+     background-color: var(--primary-color);
+     color: white;
+ }
+
+ .action-group {
+     display: flex;
+     gap: 10px;
+     flex-wrap: wrap;
+ }
+
+ .university-name {
+     font-weight: 600;
+     color: #1f2937;
+     font-size: 1.05rem;
+ }
+
+ .empty-state {
+     padding: 2.5rem;
+     text-align: center;
+     background-color: #fefce8;
+     border-radius: var(--border-radius);
+ }
+
+ .empty-state i {
+     font-size: 3rem;
+     color: #f59e0b;
+     margin-bottom: 1rem;
+ }
+
+ .search-container {
+     max-width: 300px;
+ }
+
+ @media (max-width: 768px) {
+     .action-group {
+         flex-direction: column;
+         gap: 8px;
+     }
+
+     .action-group .btn {
+         width: 100%;
+         justify-content: center;
+     }
+
+     .header-content {
+         flex-direction: column;
+         gap: 15px;
+         align-items: flex-start !important;
+     }
+
+     .search-container {
+         max-width: 100%;
+     }
+ }
